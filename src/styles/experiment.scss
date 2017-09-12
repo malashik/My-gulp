@@ -1,0 +1,13 @@
+.block1{
+    background: #3FAC33;
+    width: 50%;
+    height: 200px;
+}
+.block2{
+    background: #CF8484;
+    height: 100px;
+    &:hover{
+        background: #2F338B;
+        transition: .3s;
+    }
+}
