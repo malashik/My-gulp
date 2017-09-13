@@ -18,8 +18,8 @@ const paths = {
 		dest: 'build/assets'
 	},
 	styles: {
-		src: 'src/styles/**/*.scss',
-		dest: 'build/assets/styles/'
+		src: 'src/styles/common/menu.scss',
+		dest: 'build/assets/styles/common/'
 	},
 	images: {
 		src: 'src/images/**/*.*',
@@ -75,11 +75,7 @@ gulp.task('images', function(){
 });
 
 // следим за исходниками, папка src
-gulp.task('watch', function(){
-	gulp.watch('src/templates/pages/*.html', ['html']);
-	gulp.watch(paths.styles.src, ['styles']);
-	gulp.watch('src/images/**/*.*', ['images']);
-})
+
 
 // //запускаем сервер
 // gulp.task('browserSync', ['templates', 'fonts', 'styles', 'images'], function(){
@@ -89,19 +85,45 @@ gulp.task('watch', function(){
 // 	browserSync.watch(paths.root+'**/*.*', browserSync.reload);
 // })
 
+// gulp.task('watch', function(done){
+// 	gulp.watch("src/templates/**/*.html", ['templates']);
+// 	// gulp.watch(paths.styles.src, ['styles']);
+// 	gulp.watch("src/styles/**/*.*", ['styles']);
+// 	gulp.watch("src/images/**/*.*", ['images']);
+// })
 
-// следим за build и релоадим браузер       
-function server() {
-	browserSync.init({
-		server: paths.root
-		});
-	browserSync.watch(paths.root+'**/*.*', browserSync.reload);
-}
+gulp.task('watch', function(){
+    gulp.watch("src/templates/**/*.html", gulp.series('templates'));
+    // gulp.watch(paths.styles.src, ['styles']);
+    gulp.watch("src/styles/**/*.scss", gulp.series('styles'));
+    gulp.watch("src/images/**/*.*", gulp.series('images'));
+})
+
+
+
+// // следим за build и релоадим браузер  
+// gulp.task('server', function(){     
+// // function server() {
+// 	browserSync.init({
+// 		server: paths.root
+// 		});
+// 	browserSync.watch(paths.root+'**/*.*', browserSync.reload);
+// })
+
+// следим за build и релоадим браузер  
+gulp.task('server', function(){     
+	// function server() {
+		browserSync.init({
+			server: paths.root
+			});
+		browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
+	})
+	
 
 // Для работы    
 gulp.task('default', gulp.series(
 	gulp.parallel('styles','templates','images'),
-	gulp.parallel('watch',server)
+	gulp.parallel('watch','server')
 ));
 // сборка на продакшн
 gulp.task('build', gulp.series(
