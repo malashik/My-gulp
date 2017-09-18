@@ -1,0 +1,49 @@
+.blog-head{
+    height: 466px;
+    background-image: url(../../images/bg/forest.jpg);    
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.person__avatar{
+    margin-bottom: 32px;
+}
+.blog__title{
+    font-size: 63px;
+    &:before{
+        background-color: #fff;
+        // margin-bottom: 30px;
+    }
+}
+.blog-desc{
+    margin-top: 60px;
+}
+
+.blog-content{
+    height: 1593px;
+    display: flex;
+    justify-content: space-between;
+    &:after{
+        content: "";
+        width: 100%;
+        display: block;
+        height: 185px;
+    } 
+}
+.blog-nav{
+    width: 400px;
+}
+.blog-articles{
+    width: 800px;
+}
+.article{
+    width: 100%;
+}
+.article__title{
+    // display: block;
+}

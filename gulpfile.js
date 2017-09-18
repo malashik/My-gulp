@@ -13,9 +13,8 @@ const sourcemaps = require('gulp-sourcemaps');
 const paths = {
 	root: './build',
 	templates: {
-		pages: 'src/templates/pages/*.pug',
-		src: 'src/templates/**/*.pug',
-		dest: 'build/assets'
+		pages: 'src/templates/**/*.pug',
+		dest: 'build/pages'
 	},
 	styles: {
 		src: 'src/styles/common/menu.scss',
@@ -35,18 +34,18 @@ gulp.task('clean', function() {
 })
 
 
-// //pug 
-// gulp.task('templates', function() {
-// 	return gulp.src(paths.templates.pages)
-// 		.pipe(pug({ pretty: true }))
-// 		.pipe(gulp.dest(paths.root));
-// })
-
-//html +
+//pug + 
 gulp.task('templates', function() {
-	return gulp.src('src/templates/**/*.html')
+	return gulp.src(paths.templates.pages)
+		.pipe(pug({ pretty: true }))
 		.pipe(gulp.dest(paths.root));
 })
+
+// //html +
+// gulp.task('templates', function() {
+// 	return gulp.src('src/templates/**/*.html')
+// 		.pipe(gulp.dest(paths.root));
+// })
 
 //css +
 gulp.task('styles', function(){
@@ -82,18 +81,13 @@ gulp.task('images', function(){
 // 	browserSync.init ({
 // 		server: paths.root
 // 	});
-// 	browserSync.watch(paths.root+'**/*.*', browserSync.reload);
+// 	browserSync.watch(paths.root + '**/*.*', browserSync.reload);
 // })
 
-// gulp.task('watch', function(done){
-// 	gulp.watch("src/templates/**/*.html", ['templates']);
-// 	// gulp.watch(paths.styles.src, ['styles']);
-// 	gulp.watch("src/styles/**/*.*", ['styles']);
-// 	gulp.watch("src/images/**/*.*", ['images']);
-// })
+
 
 gulp.task('watch', function(){
-    gulp.watch("src/templates/**/*.html", gulp.series('templates'));
+    gulp.watch("src/templates/**/*.*", gulp.series('templates'));
     // gulp.watch(paths.styles.src, ['styles']);
     gulp.watch("src/styles/**/*.scss", gulp.series('styles'));
     gulp.watch("src/images/**/*.*", gulp.series('images'));

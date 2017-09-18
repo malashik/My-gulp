@@ -1,0 +1,79 @@
+extends ../common/template
+
+block variables 
+    - var title = "Мои работы"
+
+block content
+    .sections
+        .section-head
+            ul.socials.head-socials
+                li.socials__item
+                    a.social-link.vk(href="#") вк
+                li.socials__item
+                    a.social-link.github(href="#") гит
+                li.socials__item
+                    a.social-link.in(href="#") инст
+            .hamburger
+            .person.welcom-person
+                .person__avatar
+                    img.avatar-little(src="../assets/images/avatar-little.jpg", alt="")
+                .person__name Малаш Александр
+                .person__info Личный сайт разработчика
+            .btn-down
+        .works
+            .works__title
+                h2.title.title-work Мои работы
+            .works-row
+                .works-col.works-col_left
+                    h3.title.works-desc__title Сайт школы онлайн образования
+                    .works-desc__tools HTML, CSS, JAVASCRIPT
+                    a.works-desc__btn Просмотреть сайт
+                .works-col.works-col_right
+                    .works-image
+                    .works-slider
+                        .works-slider__left    
+                        .works-slider__right
+        .works-feedback
+            .works-feedback__item
+                .works-feedback__foto
+                    img(src="../assets/images/dima.jpg", alt="")
+                .works-feedback__desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 3 месяца только самых тяжелых испытаний и бессонных ночей!
+                .works-feedback__name Ковальчук Дмитрий
+                    span.works-feedback__name-job -основатель Loftschool
+            .works-feedback__item
+                .works-feedback__foto
+                    img(src="../assets/images/vova.jpg", alt="")
+                .works-feedback__desc Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .works-feedback__name Сабанцев Владимир
+                    span.works-feedback__name-job -преподаватель
+            .works-connect  
+                h3.title.works-connect__title Связаться со мной
+                    input.works-connect__name(type="text")
+                    input.works-connect__email(type="text")
+                    input.works-connect__textarea(type="text")
+                .works-connect__btns
+                    a.btn-send
+                        input(type="text")
+                    a.btn-reset
+                        input(type="text")
+    footer.footer.footer-works
+        .footer-raw.footer-top
+            .footer-col Этот сайт я сделал в рамках обучения в Школе образования Loftschool.
+            .footer-col
+                .footer-links
+                    a.footer-links__item.my-works__link Мои работы
+                    a.footer-links__item.about__link Обо мне
+                    a.footer-links__item.blogs__link Блог
+                    a.footer-links__item.autorization__link Авторизация
+                ul.socials.footer-socials
+                    li.socials__item
+                        a.social-link.vk(href="#") вк
+                    li.socials__item
+                        a.social-link.github(href="#") гит
+                    li.socials__item
+                        a.social-link.in(href="#") инст
+            .footer-col 
+                .footer-col__quote Всегда пишите код так, словно сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+                .footer-col__quote-name &ndash; Мартин Голдинг
+        .footer-raw.footer-bottom
+            .note &copy; Малаш Александр | создано с любовью в loftschool | 2017

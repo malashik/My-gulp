@@ -1,0 +1,41 @@
+extends ../common/template
+
+block variables 
+    - var title = "Добро пожаловать"
+
+block content
+    .wrapper.welcome-page
+        a.autorization(href="#") Авторизоваться
+        div.welcome
+            .person.welcom-person
+                .person__avatar
+                    img.avatar-little(src="../assets/images/avatar-little.jpg", alt="")
+                .person__name Малаш Александр
+                .person__info Личный сайт разработчика
+                ul.socials
+                    li.socials__item
+                        a.social-link.vk(href="#") вк
+                        //- img(src="../assets/images/icons/vk.svg", alt="")
+                    li.socials__item
+                        a.social-link.github(href="#") гит
+                    li.socials__item
+                        a.social-link.in(href="#") инст   
+                        //- each item in ['vk','fb','in']
+                        //- li.socials__item.fb
+                        //- li.socials__item.in
+            ul.welcom-links
+                li.welcom-links__items
+                    a.welcom-links__item.welcom-links__item_works(href="#") Мои работы
+                li.welcom-links__items
+                    a.welcom-links__item.welcom-links__item_about(href="#") Обо мне
+                li.welcom-links__items
+                    a.welcom-links__item.welcom-links__item_blog(href="#") Блог   
+        .note &copy; Малаш Александр | создано с любовью в loftschool | 2017             
+
+
+
+
+
+
+
+

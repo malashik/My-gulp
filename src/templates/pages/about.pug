@@ -1,0 +1,99 @@
+extends ../common/template
+
+block variables 
+    - var title = "Обо мне"
+
+block content
+    .sections
+        .section-head
+            ul.socials.head-socials
+                li.socials__item
+                    a.social-link.vk(href="#") вк
+                li.socials__item
+                    a.social-link.github(href="#") гит
+                li.socials__item
+                    a.social-link.in(href="#") инст
+            .hamburger схлопывает
+
+            .person.about-person
+                .person__avatar
+                    img.avatar-little(src="../assets/images/avatar-little.jpg", alt="")
+                .person__name Малаш Александр
+                .person__info Личный сайт разработчика
+            .btn-down
+        .section-about
+            .about-left
+                img.svg-lef(src="", alt="") 
+                h2.title.about-left__title Обо мне
+                .about__content
+                    img.about__content-bigAva(src="../assets/images/avatar-big.jpg", alt="")
+                    //-  картинка w444 h390
+                    h3.title.about-left__desc Кто я
+                    .about__content-desc
+                        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo perferendis odit corporis. Minus sequi repellendus facere magnam consectetur ratione sed! Quibusdam, aliquam nam. Suscipit voluptas eos consectetur. Temporibus, consequatur ab?
+                        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo perferendis odit corporis. Minus sequi repellendus facere magnam consectetur ratione sed! Quibusdam, aliquam nam. Suscipit voluptas eos consectetur. Temporibus, consequatur ab?
+            .about-right
+                img.svg-right  
+                h3.title.about-right__title Чем я могу быть вам полезен
+                .about-right__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta amet dolore placeat quia provident rem. Assumenda fugiat quaerat, optio odio facere voluptas aliquid mollitia ipsa perspiciatis, harum corporis tenetur alias!
+                .about-skils
+                    .about-skils__title Frontand
+                    .about-skils__imgs 
+                        img(src="#", alt="#")
+                        img(src="#", alt="#")
+                        img(src="#", alt="#")
+                    .about-skils__title Backend
+                    .about-skils__imgs
+                        img(src="#", alt="#")
+                        img(src="#", alt="#")
+                        img(src="#", alt="#")
+                    .about-skils__title WorkFlow
+                    .about-skils__imgs
+                        img(src="#", alt="#")
+                        img(src="#", alt="#")
+                        img(src="#", alt="#")
+        .section-map
+            .google-map
+            .contacts-map
+                h3.title.title-map Контакты
+                ul.contacts__list
+                    li.contacts-row
+                        .contacts-row__icon 
+                        .contacts-row__content skype
+                    li.contacts-row
+                        .contacts-row__icon
+                        .contacts-row__content malashik9110@gmail.com
+                    li.contacts-row
+                        .contacts-row__icon
+                        .contacts-row__content +375 44 517-02-15
+                    li.contacts-row
+                        .contacts-row__icon
+                        .contacts-row__content Минск
+    footer.footer.footer-map
+        .footer-raw.footer-top
+            .footer-col Этот сайт я сделал в рамках обучения в Школе образования Loftschool.
+            .footer-col
+                .footer-links
+                    a.footer-links__item.my-works__link Мои работы
+                    a.footer-links__item.about__link Обо мне
+                    a.footer-links__item.blogs__link Блог
+                    a.footer-links__item.autorization__link Авторизация
+                ul.socials.footer-socials
+                    li.socials__item
+                        a.social-link.vk(href="#") вк
+                    li.socials__item
+                        a.social-link.github(href="#") гит
+                    li.socials__item
+                        a.social-link.in(href="#") инст
+            .footer-col 
+                .footer-col__quote Всегда пишите код так, словно сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
+                .footer-col__quote-name &ndash; Мартин Голдинг
+        .footer-raw.footer-bottom
+            .note &copy; Малаш Александр | создано с любовью в loftschool | 2017
+
+
+
+
+
+
+
