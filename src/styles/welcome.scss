@@ -61,7 +61,7 @@
 }
 .person__info{
     opacity: 0.8;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 .socials{
@@ -70,36 +70,41 @@
     justify-content: center;
     flex-direction: row;
     width: 140px;
-    height: 30px;
-    border:1px solid #459A25;
-    
+    height: 30px;    
 }
+
 .socials__item{
     height: 100%;
     width: 100%;
     
 }
-.social-link{
+.social-link {
     display: block;
     height: 100%;
     min-height: 30px;
     min-width: 30px;
+    fill: #fff;
+    transition: .2s;
+    &:hover{
+        fill: #4e8839;
+    }
 }
-.vk{
-    background-image: url(../../images/icons/vk.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.github{
-    background-image: url(../../images/icons/github.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.in{
-    background-image: url(../../images/icons/in.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
+// .vk{
+//     background-image: url(../../images/icons/vk.svg);
+//     background-position: center;
+//     background-repeat: no-repeat;
+// }
+// .github{
+//     background-image: url(../../images/icons/github.svg);
+//     background-position: center;
+//     background-repeat: no-repeat;
+// }
+// .in{
+//     background-image: url(../../images/icons/in.svg);
+//     background-position: center;
+//     background-repeat: no-repeat;
+// }
 
 .welcom-links{
     background: #9fb89d;

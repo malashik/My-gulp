@@ -1,0 +1,98 @@
+@media (max-width: 768px){
+////////////// welcome
+    .welcome-page{
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+    .welcome {
+        width: 350px;
+    }
+    .welcom-links__item{
+        padding:0 26.1px;
+    }
+////////////// login
+    .login-wrapper{
+        padding-bottom: 40px;
+    }
+    .login,
+    .login-input__btns{
+        width: 350px;
+    }
+    
+}
+
+
+@media (max-width: 480px){
+////////////// welcome
+    .welcome-page{
+        padding: 10px 2%;
+        .note{
+            font-size: 14px;
+        }
+    }
+    .autorization {
+        font-size: 14px;
+        height: 40px;
+        width: 145px;
+        border-radius: 50px;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: 40px;
+    }
+    .welcome{
+        font-size: 14px;
+        width: 300px;
+        padding: 30px 30px;
+    }
+    .person__name{
+        font-size: 25px;
+    }
+    .welcom-links__item{
+        padding:0 21.7px;
+    }   
+////////////// login
+    .login-wrapper{
+        padding:0 2.5% 20px;
+        .note{
+            font-size: 14px;
+        }
+    }
+    .login,
+    .login-input__btns{
+        font-size: 14px;
+        width: 300px;
+    }
+    .person__name{
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width: 320px){
+////////////// welcome
+    .welcome-page{
+        padding:40px 0 10px;
+    }
+    .welcome {
+        width: 100%;
+        padding-top: 50px;
+    }
+    .person__name{
+        font-size: 21px;
+    }
+    .welcom-links__item{
+        padding: 0 16.5px;
+    }
+////////////// login
+    .login-wrapper{
+        padding:0 0 10px;
+        .note{
+            font-size: 14px;
+        }
+    }
+    .login {
+        width: 100%;
+        max-width: 300px;
+    }
+}

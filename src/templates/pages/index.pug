@@ -6,32 +6,59 @@ block variables
 block content
     .wrapper.welcome-page
         a.autorization(href="#") Авторизоваться
-        div.welcome
-            .person.welcom-person
-                .person__avatar
-                    img.avatar-little(src="../assets/images/avatar-little.jpg", alt="")
-                .person__name Малаш Александр
-                .person__info Личный сайт разработчика
-                ul.socials
-                    li.socials__item
-                        a.social-link.vk(href="#") вк
-                        //- img(src="../assets/images/icons/vk.svg", alt="")
-                    li.socials__item
-                        a.social-link.github(href="#") гит
-                    li.socials__item
-                        a.social-link.in(href="#") инст   
-                        //- each item in ['vk','fb','in']
-                        //- li.socials__item.fb
-                        //- li.socials__item.in
-            ul.welcom-links
-                li.welcom-links__items
-                    a.welcom-links__item.welcom-links__item_works(href="#") Мои работы
-                li.welcom-links__items
-                    a.welcom-links__item.welcom-links__item_about(href="#") Обо мне
-                li.welcom-links__items
-                    a.welcom-links__item.welcom-links__item_blog(href="#") Блог   
+        .welcom-wrapper
+            div.welcome
+                .person.welcom-person
+                    .person__avatar
+                        img.avatar-little(src="../assets/images/avatar-little.jpg", alt="")
+                    .person__name Малаш Александр
+                    .person__info Личный сайт веб разработчика
+                    ul.socials.color_welcome 
+                        li.socials__item
+                            a.social-link(href="#")
+                                svg.svg-vk(width="30.011px" height="24px")
+                                    use(xlink:href='../assets/images/icons/sprite.svg#vk')
+                        li.socials__item 
+                            a.social-link(href="#")
+                                svg.svg-git(width="26px" height="23px")
+                                    use(xlink:href='../assets/images/icons/sprite.svg#git')
+    
+                        li.socials__item
+                            a.social-link(href="#")
+                                svg.svg-in(width="24px" height="21.938px")
+                                    use(xlink:href='../assets/images/icons/sprite.svg#in')
+                ul.welcom-links
+                    li.welcom-links__items
+                        a.welcom-links__item.welcom-links__item_works(href="works.html") Мои работы
+                    li.welcom-links__items
+                        a.welcom-links__item.welcom-links__item_about(href="about.html") Обо мне
+                    li.welcom-links__items
+                        a.welcom-links__item.welcom-links__item_blog(href="blog.html") Блог   
+            form.login
+                h2.title.login-title Авторизуйтесь
+                .login-input__wrap
+                    .login-input__pic-text
+                    input.login-input__text(type="text" placeholder='Логин')
+                .login-input__wrap
+                    .login-input__pic-pasw
+                    input.login-input__text(type="password" placeholder='Пароль')
+                label.login-input__label
+                    input.login-input__checkbox(type="checkbox" value='Я человек')
+                    span Я человек
+                .login-input__question Вы точно не робот?
+                .login-input__row
+                    label.login-input__label
+                        input.login-input__radio(type="radio" name='isRobot' value='Да')
+                        span.yes Да 
+                    
+                        input.login-input__radio(type="radio" name='isRobot' value='Нет' checked)
+                        span.yes Нет
+                .login-input__btns
+                    a.login-input__link(href="index.html") На главную
+                    a.login-input__link(href="#") Войти
         .note &copy; Малаш Александр | создано с любовью в loftschool | 2017             
-
+    script(src="../js/jquery-3.2.1.min.js")
+    script(src="../js/main.js")
 
 
 

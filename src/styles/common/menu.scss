@@ -1,5 +1,6 @@
 @import './normalize.scss';
 @import './style.scss';
+@import './fonts.scss';
 
 
 // layout
@@ -7,6 +8,13 @@
 @import '../about.scss';
 @import '../blog.scss';
 @import '../works.scss';
+
+
+// media
+@import 'media_welcome-login';
+@import 'media_about';
+@import 'media_works';
+@import 'media_blog';
 
 
 
