@@ -23,24 +23,31 @@ $(document).ready(function(){
 
 //////// blog-nav
 const menu = document.querySelector(".blog-nav");
-const li = document.getElementsByClassName('blog-nav__item');
-let coordsMenu = {};
-const fixedMenu = 'position: fixed';
+const wrap = document.querySelector(".blog-nav__wrap");
 
 document.addEventListener('scroll', function (e) {
-    coordsMenu = menu.getBoundingClientRect();
-    if (coordsMenu.top<20){
+    console.log(outerWidth);
+    if(outerWidth>768){
+        if (wrap.getBoundingClientRect().top<20){
+            menu.classList.remove('blog-nav_fixed');        
+            menu.classList.add('blog-nav_fixed');
+        } 
+        if (wrap.getBoundingClientRect().top>20){
+            menu.classList.remove('blog-nav_fixed');
+        }
+    }
+    if(outerWidth<480){
         menu.classList.remove('blog-nav_fixed');
-        
-        menu.classList.add('blog-nav_fixed');
-        console.log('сработал add')
-    } 
-    if (coordsMenu.top>20){
-        menu.classList.remove('blog-nav_fixed');
-        console.log('сработал remove')
-        
     }
 })
+
+///////// hamburger
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener('click', function(){
+    hamburger.classList.toggle('hamburger_active');
+})
+
 
 
 
