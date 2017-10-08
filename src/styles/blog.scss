@@ -41,22 +41,26 @@
     }
     margin: 0;
 }
-.blog-desc {
-    // margin-top: 60px;
-}
 
 .blog-content {
+    position: relative;
     min-height: 1500px;
     padding-top: 40px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    background-color: #f9f8f0;
     &:after{
         content: "";
         width: 100%;
         display: block;
         height: 185px;
-    } 
+    }
+    .svg-both{
+        display: block;
+        fill: #f8f9f5;
+        stroke: #f8f9f5;
+    }
 }
 .blog-row {
     display: flex;
@@ -97,7 +101,8 @@
     }
 }
 .blog-articles {
-    width: 890px;
+    width: 70vw;
+    max-width: 1010px;
     padding-left: 100px;
 }
 .article {

@@ -42,12 +42,30 @@ block content
                 svg(width="26px" height="17px")
                     use(xlink:href='../assets/images/icons/arrow_down.svg#down')
         .works
+            svg.svg-both(width="100%" height="100.8px" viewBox="0 -1 800 40" preserveAspectRatio = "none")
+                polygon(points='0,0 0,40 800,40 800,0 400,40')
             .title-work__container
                 h2.title.title-work Мои работы
             .works-row
+                .btn-prev
+                    svg.arrow-top(width="26px" height="17px")
+                        use(xlink:href='../assets/images/icons/arrow_down.svg#down')
+                .btn-next
+                    svg.arrow-top(width="26px" height="17px")
+                        use(xlink:href='../assets/images/icons/arrow_down.svg#down')
+                ul.works-slide__nav
+                    li.works-row__circle.works-row__circle_active
+                    li.works-row__circle
+                    li.works-row__circle
                 .works-col.works-col_left
-                    .works-col__pic-wrap
-                        img.works-col__pic(src="../assets/images/works.png", alt="")              
+                    .works__slider
+                        .works__slides
+                            .works__slides-item.works__slides-item_active
+                                img.works-col__pic(src="../assets/images/works.png", alt="")              
+                            .works__slides-item(style='background:red')
+                                img.works-col__pic(src="../assets/images/works.png", alt="")              
+                            .works__slides-item(style='background:green')
+                                img.works-col__pic(src="../assets/images/works.png", alt="")              
                 .works-col.works-col_right
                     h3.title.works-desc__title Сайт школы онлайн образования
                     .works-desc__tools HTML, CSS, JAVASCRIPT
@@ -81,6 +99,5 @@ block content
             .btn-top
                 svg.arrow-top(width="26px" height="17px")
                     use(xlink:href='../assets/images/icons/arrow_down.svg#down')
-
     include ../common/footer
     

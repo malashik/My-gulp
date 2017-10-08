@@ -2,8 +2,8 @@ const gulp = require('gulp');
 const pug = require('gulp-pug');
 const del = require('del');
 const notify = require('gulp-notify');
-const imagemin = require('gulp-imagemin');
-const cache = require('gulp-cache');
+// const imagemin = require('gulp-imagemin');
+// const cache = require('gulp-cache');
 const browserSync = require('browser-sync').create();
 
 const sass = require('gulp-sass');
@@ -58,6 +58,7 @@ gulp.task('styles', function(){
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest(paths.styles.dest))
 		// pipe(browserSync.stream())
+		
 })
 
 // перенос fonts +
@@ -66,10 +67,15 @@ gulp.task('fonts', function() {
 		   .pipe(gulp.dest('build/assets/fonts/'))
 });
 
+// js
+gulp.task('js', function() {
+	return gulp.src('src/js/**/*.js')
+		   .pipe(gulp.dest('build/assets/js/'))
+});
+
 //кеширование и сжатие картинок +
 gulp.task('images', function(){
 	return gulp.src(paths.images.src)
-		.pipe(cache(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))) 	
 		.pipe(gulp.dest(paths.images.dest));    		
 });
 
@@ -91,6 +97,8 @@ gulp.task('watch', function(){
     // gulp.watch(paths.styles.src, ['styles']);
     gulp.watch("src/styles/**/*.scss", gulp.series('styles'));
     gulp.watch("src/images/**/*.*", gulp.series('images'));
+    gulp.watch("src/fonts/**/*.*", gulp.series('fonts'));
+    gulp.watch("src/js/**/*.*", gulp.series('js'));
 })
 
 
@@ -116,13 +124,13 @@ gulp.task('server', function(){
 
 // Для работы    
 gulp.task('default', gulp.series(
-	gulp.parallel('styles','templates','images'),
+	gulp.parallel('styles','templates','images','fonts','js'),
 	gulp.parallel('watch','server')
 ));
 // сборка на продакшн
 gulp.task('build', gulp.series(
 	'clean',
-	gulp.parallel('styles','templates','images')
+	gulp.parallel('styles','templates','images','fonts','js')
 ));								
 
 

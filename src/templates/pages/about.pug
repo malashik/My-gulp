@@ -2,6 +2,7 @@ extends ../common/template
 
 block variables 
     - var title = "Обо мне"
+    //- - var svg_circle = svg.circle-svg
 
 block content
     .sections
@@ -41,11 +42,12 @@ block content
                 svg(width="26px" height="17px")
                     use(xlink:href='../assets/images/icons/arrow_down.svg#down')
         .section-about
+            svg.svg-both(width="100%" height="100.8px" viewBox="0 -1 800 40" preserveAspectRatio = "none")
+                polygon(points='0,0 0,40 800,40 800,0 400,40')
+
             .about-left
-                //- .about-left__wrap
-                svg.svg-left(width="100%" height="125.986px")
-                    polygon(points='0,0 0,125 1000,125 1000,100' viewBox="0 0 100% 125")   
-                    //- use(xlink:href='../assets/images/icons/about_bg.svg#left')
+                svg.svg-left(width="100%" height="100.8px" viewBox="0 -1 800 40" preserveAspectRatio = "none")
+                    polygon(points='0,0 0,40 800,40')
                 .about-title__container
                     h2.title.about-left__title Обо мне
                 .about-left__content
@@ -55,9 +57,8 @@ block content
                         p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo perferendis odit corporis. Minus sequi repellendus facere magnam consectetur ratione sed! Quibusdam, aliquam nam. Suscipit voluptas eos consectetur. Temporibus, consequatur ab?
                         p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo perferendis odit corporis. Minus sequi repellendus facere magnam consectetur ratione sed! Quibusdam, aliquam nam. Suscipit voluptas eos consectetur. Temporibus, consequatur ab?
             .about-right
-                //- svg.svg-right (width="600.006px" height="125.986px")
-                //-     polygon(points='0,100 0,125 600,125 600,0')   
-                    //- use(xlink:href='../assets/images/icons/about_bg.svg#right')
+                svg.svg-right(width="100%" height="100.8px" viewBox="0 -1 800 40" preserveAspectRatio = "none")
+                    polygon(points='0,40 800,40 800,0')
                 .about-right__wrap   
                     h3.title.about-right__title Чем я могу быть вам полезен
                     .about-right__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta amet dolore placeat quia provident rem. Assumenda fugiat quaerat, optio odio facere voluptas aliquid mollitia ipsa perspiciatis, harum corporis tenetur alias!
@@ -65,6 +66,7 @@ block content
                         .about-skils__title Frontand
                         .about-skils__row
                             .about-skils__item
+                                //- #{svg_circle}
                                 svg.circle-svg
                                     circle(r='45' cx='50%' cy='50%').circle-first
                                     circle(r='45' cx='50%' cy='50%').circle-second.circle-second_html5
@@ -119,7 +121,7 @@ block content
                                     circle(r='45' cx='50%' cy='50%').circle-second.circle-second_bower
                                 span.circle-title Bower
         .section-map
-            .google-map
+            .google-map(id='map')
             .contacts-map
                 h3.title.title-map Контакты
                 ul.contacts__list
@@ -136,3 +138,5 @@ block content
                         .contacts-row__icon.contacts-row__icon_city
                         .contacts-row__content Минск
     include ../common/footer
+    script(src="../assets/js/map.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYBpOUcTHdp-8cmj4sEbxFU6QmLqh64Aw&callback=initMap" async defer)
