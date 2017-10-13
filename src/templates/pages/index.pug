@@ -5,6 +5,7 @@ block variables
 
 block content
     .wrapper.welcome-page
+        canvas.Background-canvas
         a.autorization(href="#") Авторизоваться
         .welcom-wrapper
             div.welcome
@@ -15,16 +16,15 @@ block content
                     .person__info Личный сайт веб разработчика
                     ul.socials.color_welcome 
                         li.socials__item
-                            a.social-link(href="#")
+                            a.social-link(href="https://vk.com/malashik91" target='_blank')
                                 svg.svg-vk(width="30.011px" height="24px")
                                     use(xlink:href='../assets/images/icons/sprite.svg#vk')
                         li.socials__item 
-                            a.social-link(href="#")
+                            a.social-link(href="https://github.com/malashik" target='_blank')
                                 svg.svg-git(width="26px" height="23px")
                                     use(xlink:href='../assets/images/icons/sprite.svg#git')
-    
                         li.socials__item
-                            a.social-link(href="#")
+                            a.social-link(href="#" target='_blank')
                                 svg.svg-in(width="24px" height="21.938px")
                                     use(xlink:href='../assets/images/icons/sprite.svg#in')
                 ul.welcom-links
@@ -38,26 +38,30 @@ block content
                 h2.title.login-title Авторизуйтесь
                 .login-input__wrap
                     .login-input__pic-text
-                    input.login-input__text(type="text" placeholder='Логин')
+                    input.login-input__text(type="text" placeholder='Логин' required)
                 .login-input__wrap
                     .login-input__pic-pasw
-                    input.login-input__text(type="password" placeholder='Пароль')
+                    input.login-input__text(type="password" placeholder='Пароль' required)
                 label.login-input__label
-                    input.login-input__checkbox(type="checkbox" value='Я человек')
-                    span Я человек
+                    input.login-input__checkbox(type="checkbox" name="checkbox" value='Я человек')
+                    span.checkbox-custom
+                    span.login-input__checkbox-text Я человек
                 .login-input__question Вы точно не робот?
                 .login-input__row
                     label.login-input__label
                         input.login-input__radio(type="radio" name='isRobot' value='Да')
-                        span.yes Да 
-                    
+                        span.radio-custom
+                        span.login-input__radio-text Да
+                    label.login-input__label
                         input.login-input__radio(type="radio" name='isRobot' value='Нет' checked)
-                        span.yes Нет
+                        span.radio-custom
+                        span.login-input__radio-text Нет
                 .login-input__btns
                     a.login-input__link(href="index.html") На главную
-                    a.login-input__link(href="#") Войти
+                    input(type="submit" value="Войти").login-input__link
         .note &copy; Малаш Александр | создано с любовью в loftschool | 2017             
     script(src="../assets/js/jquery-3.2.1.min.js")
+    script(src="../assets/js/water.js")
     script(src="../assets/js/main.js")
 
 

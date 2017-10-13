@@ -8,6 +8,10 @@
     // display: flex;
     // justify-content: flex-start;
 }
+.works__slider-add{
+    height: 100%;
+    position: relative;
+}
 @media (max-width: 768px){
     .works__slider{
         width: calc(100vw - 100px);
@@ -22,6 +26,18 @@
     top: 0;
     right: 0;
 }
+.works__slides-add{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 1s;
+}
+.works__slides-add_active{
+    opacity: 1;
+}
 .works__slides-item{
     height: 100%;
     width: 100%;
@@ -34,7 +50,7 @@
     right: 0;
     z-index: 9;
     opacity: 0;
-    transition: .5s;
+    transition: 1s;
 
     img{
         max-width: 100%;

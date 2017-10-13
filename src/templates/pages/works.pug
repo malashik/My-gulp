@@ -9,15 +9,15 @@ block content
             .section-head__row
                 ul.socials.head-socials 
                     li.socials__item
-                        a.social-link(href="#")
+                        a.social-link(href="https://vk.com/malashik91" target='_blank')
                             svg.svg-vk(width="30.011px" height="24px")
                                 use(xlink:href='../assets/images/icons/sprite.svg#vk')
                     li.socials__item 
-                        a.social-link(href="#")
+                        a.social-link(href="https://github.com/malashik" target='_blank')
                             svg.svg-git(width="26px" height="23px")
                                 use(xlink:href='../assets/images/icons/sprite.svg#git')
                     li.socials__item
-                        a.social-link(href="#")
+                        a.social-link(href="#" target='_blank')
                             svg.svg-in(width="24px" height="21.938px")
                                 use(xlink:href='../assets/images/icons/sprite.svg#in')
                 .hamburger
@@ -67,11 +67,25 @@ block content
                             .works__slides-item(style='background:green')
                                 img.works-col__pic(src="../assets/images/works.png", alt="")              
                 .works-col.works-col_right
-                    h3.title.works-desc__title Сайт школы онлайн образования
-                    .works-desc__tools HTML, CSS, JAVASCRIPT
-                    a.works-desc__btn
-                        .works-desc__btn-icon
-                        span Просмотреть сайт
+                    .works__slider-add
+                        .works__slides-add.works__slides-add_active
+                            h3.title.works-desc__title Сайт школы онлайн образования 1
+                            .works-desc__tools HTML, CSS, JAVASCRIPT
+                            a.works-desc__btn
+                                .works-desc__btn-icon
+                                span Просмотреть сайт
+                        .works__slides-add
+                            h3.title.works-desc__title Сайт 2
+                            .works-desc__tools Pug, SaaS, jQuery 
+                            a.works-desc__btn
+                                .works-desc__btn-icon
+                                span Просмотреть сайт
+                        .works__slides-add
+                            h3.title.works-desc__title Сайт школы 3
+                            .works-desc__tools JAVASCRIPT
+                            a.works-desc__btn
+                                .works-desc__btn-icon
+                                span Просмотреть сайт
         .works-feedback
             .works-feedback__title-container
                 h2.works-feedback__title.title Что обо мне говорят
@@ -90,9 +104,9 @@ block content
                         span.works-feedback__name-job -преподаватель
             form.works-connect(action="") 
                 h3.title.works-connect__title Связаться со мной
-                input.works-connect__item.works-connect__name(type="text" placeholder="Имя")
-                input.works-connect__item.works-connect__email(type="email" placeholder="Email" )
-                textarea.works-connect__textarea(name="textarea" cols="10" rows="10" placeholder="Введите ваше сообщение")
+                input.works-connect__item.works-connect__name(type="text" placeholder="Имя" required)
+                input.works-connect__item.works-connect__email(type="email" placeholder="Email" required)
+                textarea.works-connect__textarea(name="textarea" cols="10" rows="10" placeholder="Введите ваше сообщение" required)
                 .works-connect__btns
                         input.btn-send(type="submit" value="Отправить")
                         input.btn-reset(type="reset" value="Очистить")

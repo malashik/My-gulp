@@ -2,6 +2,10 @@ extends ../common/template
 
 block variables 
     - var title = "Обо мне"
+    - var frontandArr = [{ name:"HTML5", value:'190 283'},{ name:"CSS3", value:'180 283'},{ name:"JavaScript & jQuery", value:'60 283'}]
+    - var backendArr = [{ name:"PHP", value:'20 283'},{ name:"mySQL", value:'10 283'},{ name:"Node.js & npm", value:'60 283'},{ name:"Mongo.db", value:'20 283'}]
+    - var workflowArr = [{ name:"Git", value:'80 283'},{ name:"Gulp", value:'90 283'},{ name:"Bower", value:'120 283'}]
+
     //- - var svg_circle = svg.circle-svg
 
 block content
@@ -10,15 +14,15 @@ block content
             .section-head__row
                 ul.socials.head-socials 
                     li.socials__item
-                        a.social-link(href="#")
+                        a.social-link(href="https://vk.com/malashik91" target='_blank')
                             svg.svg-vk(width="30.011px" height="24px")
                                 use(xlink:href='../assets/images/icons/sprite.svg#vk')
                     li.socials__item 
-                        a.social-link(href="#")
+                        a.social-link(href="https://github.com/malashik" target='_blank')
                             svg.svg-git(width="26px" height="23px")
                                 use(xlink:href='../assets/images/icons/sprite.svg#git')
                     li.socials__item
-                        a.social-link(href="#")
+                        a.social-link(href="#" target='_blank')
                             svg.svg-in(width="24px" height="21.938px")
                                 use(xlink:href='../assets/images/icons/sprite.svg#in')
                 .hamburger
@@ -65,61 +69,29 @@ block content
                     .about-skils
                         .about-skils__title Frontand
                         .about-skils__row
-                            .about-skils__item
-                                //- #{svg_circle}
-                                svg.circle-svg
-                                    circle(r='45' cx='50%' cy='50%').circle-first
-                                    circle(r='45' cx='50%' cy='50%').circle-second.circle-second_html5
-                                span.circle-title HTML5 
-                            .about-skils__item
-                                svg.circle-svg
-                                    circle(r='45' cx='50%' cy='50%').circle-first
-                                    circle(r='45' cx='50%' cy='50%').circle-second.circle-second_css3
-                                span.circle-title CSS3 
-                            .about-skils__item
-                                svg.circle-svg
-                                    circle(r='45' cx='50%' cy='50%').circle-first
-                                    circle(r='45' cx='50%' cy='50%').circle-second.circle-second_javascript
-                                span.circle-title JavaScript &amp; jQuery   
+                            - for (var i = 0; i < frontandArr.length; i++)
+                                .about-skils__item
+                                    //- #{svg_circle}
+                                    svg.circle-svg
+                                        circle(r='45' cx='50%' cy='50%').circle-first
+                                        circle(r='45' cx='50%' cy='50%' style="stroke-dasharray:" + frontandArr[i].value).circle-second.circle-second_stop
+                                    span.circle-title=frontandArr[i].name
                         .about-skils__title Backend
                         .about-skils__row
-                            .about-skils__item
-                                svg.circle-svg
-                                    circle(r='45' cx='50%' cy='50%').circle-first
-                                    circle(r='45' cx='50%' cy='50%').circle-second.circle-second_php
-                                span.circle-title PHP
-                            .about-skils__item
-                                svg.circle-svg
-                                    circle(r='45' cx='50%' cy='50%').circle-first
-                                    circle(r='45' cx='50%' cy='50%').circle-second.circle-second_mysql
-                                span.circle-title mySQL 
-                            .about-skils__item
-                                svg.circle-svg
-                                    circle(r='45' cx='50%' cy='50%').circle-first
-                                    circle(r='45' cx='50%' cy='50%').circle-second.circle-second_nodejs
-                                span.circle-title Node.js &amp; npm   
-                            .about-skils__item
-                                svg.circle-svg
-                                    circle(r='45' cx='50%' cy='50%').circle-first
-                                    circle(r='45' cx='50%' cy='50%').circle-second.circle-second_mongodb
-                                span.circle-title Mongo.db   
+                            -for(var i=0;i < backendArr.length; i++)
+                                .about-skils__item
+                                    svg.circle-svg
+                                        circle(r='45' cx='50%' cy='50%').circle-first
+                                        circle(r='45' cx='50%' cy='50%' style="stroke-dasharray:" + backendArr[i].value).circle-second.circle-second_stop
+                                    span.circle-title=backendArr[i].name
                         .about-skils__title WorkFlow
                         .about-skils__row
-                            .about-skils__item
-                                svg.circle-svg
-                                    circle(r='45' cx='50%' cy='50%').circle-first
-                                    circle(r='45' cx='50%' cy='50%').circle-second.circle-second_git
-                                span.circle-title Git 
-                            .about-skils__item
-                                svg.circle-svg
-                                    circle(r='45' cx='50%' cy='50%').circle-first
-                                    circle(r='45' cx='50%' cy='50%').circle-second.circle-second_gulp
-                                span.circle-title Gulp   
-                            .about-skils__item
-                                svg.circle-svg
-                                    circle(r='45' cx='50%' cy='50%').circle-first
-                                    circle(r='45' cx='50%' cy='50%').circle-second.circle-second_bower
-                                span.circle-title Bower
+                            -for(var i = 0; i < workflowArr.length; i++)
+                                .about-skils__item
+                                    svg.circle-svg
+                                        circle(r='45' cx='50%' cy='50%').circle-first
+                                        circle(r='45' cx='50%' cy='50%' style="stroke-dasharray:"+workflowArr[i].value).circle-second.circle-second_stop
+                                    span.circle-title=workflowArr[i].name 
         .section-map
             .google-map(id='map')
             .contacts-map
@@ -127,16 +99,17 @@ block content
                 ul.contacts__list
                     li.contacts-row
                         .contacts-row__icon.contacts-row__icon_skype 
-                        .contacts-row__content skype
+                        a(href="skype:malashik91" target='_blank').contacts-row__content malashik91
                     li.contacts-row
                         .contacts-row__icon.contacts-row__icon_email
-                        .contacts-row__content malashik9110@gmail.com
+                        a(href="mailto:malashik9110@gmail.com" target='_blank').contacts-row__content malashik9110@gmail.com
                     li.contacts-row
                         .contacts-row__icon.contacts-row__icon_phone
-                        .contacts-row__content +375 44 517-02-15
+                        a(href="tel:+375445170215" target='_blank').contacts-row__content +375 44 517-02-15
                     li.contacts-row
                         .contacts-row__icon.contacts-row__icon_city
-                        .contacts-row__content Минск
+                        a(href="https://www.google.ru/maps/@53.9070054,27.5605674,14.75z").contacts-row__content Минск
     include ../common/footer
     script(src="../assets/js/map.js")
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYBpOUcTHdp-8cmj4sEbxFU6QmLqh64Aw&callback=initMap" async defer)
+    script(src="../assets/js/waterAdd.js")

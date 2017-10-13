@@ -9,15 +9,15 @@ block content
             .section-head__row
                 ul.socials.head-socials 
                     li.socials__item
-                        a.social-link(href="#")
+                        a.social-link(href="https://vk.com/malashik91" target='_blank')
                             svg.svg-vk(width="30.011px" height="24px")
                                 use(xlink:href='../assets/images/icons/sprite.svg#vk')
                     li.socials__item 
-                        a.social-link(href="#")
+                        a.social-link(href="https://github.com/malashik" target='_blank')
                             svg.svg-git(width="26px" height="23px")
                                 use(xlink:href='../assets/images/icons/sprite.svg#git')
                     li.socials__item
-                        a.social-link(href="#")
+                        a.social-link(href="#" target='_blank')
                             svg.svg-in(width="24px" height="21.938px")
                                 use(xlink:href='../assets/images/icons/sprite.svg#in')
                 .hamburger
@@ -47,92 +47,23 @@ block content
                 .blog-nav__wrap
                     .circle-nav.circle-nav_active
                     ul.blog-nav
-                        li.blog-nav__item
-                            a.blog-nav__link(href="#") Самое важное в SASS
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Приёмы в вёрстке, без которых не обходится ни один сайт
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Моя сборка на Gulp
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                        li.blog-nav__item 
-                            a.blog-nav__link(href="#") Почему я выбрал Jade
-                .blog-articles    
-                    .article
+                        li.blog-nav__item.blog-nav__item_active(id="article1_link")
+                            a.blog-nav__link(href="#article1") Самое важное в SASS
+                        li.blog-nav__item(id="article2_link")
+                            a.blog-nav__link(href="#article2") Приёмы в вёрстке, без которых не обходится ни один сайт
+                        li.blog-nav__item(id="article3_link")
+                            a.blog-nav__link(href="#article3") Моя сборка на Gulp
+                .blog-articles
+                    .article(id='article1')
                         h3.article__title Самое важное в SASS
                         .article__date 03 ноября 2012
                         .article__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate suscipit eligendi quae modi eum ea distinctio veniam cum minus non. Sit qui voluptatum, excepturi voluptate consequuntur cupiditate pariatur nisi praesentium corrupti velit tempore facilis necessitatibus iste est blanditiis doloribus quis. Magni facere, ratione suscipit temporibus dicta dolorem nihil eaque excepturi dolores sed provident nesciunt voluptatem voluptates placeat aliquid veritatis ut hic eius aperiam corporis dolore reprehenderit nobis quo nemo? Culpa illum saepe explicabo possimus, quas velit vel magni odio harum deleniti numquam sit accusantium voluptatibus molestias similique cumque repudiandae animi quaerat aspernatur officia libero, omnis necessitatibus eius! Nemo, facilis porro.
-                    .article
+                    .article(id='article2')
                         h3.article__title Секретные приемы верстки
                         .article__date 09 февраля 2017
                         .article__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sit sint, provident modi eum eaque molestiae natus quos nam ratione dicta esse ex saepe recusandae voluptatum repudiandae similique, sapiente deserunt est id! Assumenda quis veritatis iusto ea vitae sunt vel repellendus ex debitis sed quidem nesciunt placeat illo dolores perspiciatis doloribus similique, impedit laboriosam exercitationem atque sequi accusamus, facere voluptate. Quidem dolorum, totam cumque sunt rerum quia et omnis sit fugit ipsam facere consectetur atque dolorem earum quaerat eos necessitatibus ut, accusamus temporibus soluta hic nostrum ex laudantium voluptas. Possimus, officia mollitia at rerum reprehenderit nulla quisquam architecto illum voluptate?
-                    .article
-                        h3.article__title Секретные приемы верстки еще раз
+                    .article(id='article3')
+                        h3.article__title Моя сборка на Gulp
                         .article__date 09 февраля 2017
-                        .article__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sit sint, provident modi eum eaque molestiae natus quos nam ratione dicta esse ex saepe recusandae voluptatum repudiandae similique, sapiente deserunt est id! Assumenda quis veritatis iusto ea vitae sunt vel repellendus ex debitis sed quidem nesciunt placeat illo dolores perspiciatis doloribus similique, impedit laboriosam exercitationem atque sequi accusamus, facere voluptate. Quidem dolorum, totam cumque sunt rerum quia et omnis sit fugit ipsam facere consectetur atque dolorem earum quaerat eos necessitatibus ut, accusamus temporibus soluta hic nostrum ex laudantium voluptas. Possimus, officia mollitia at rerum reprehenderit nulla quisquam architecto illum voluptate?
-                    .article
-                        h3.article__title Секретные приемы верстки еще раз
-                        .article__date 09 февраля 2017
-                        .article__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sit sint, provident modi eum eaque molestiae natus quos nam ratione dicta esse ex saepe recusandae voluptatum repudiandae similique, sapiente deserunt est id! Assumenda quis veritatis iusto ea vitae sunt vel repellendus ex debitis sed quidem nesciunt placeat illo dolores perspiciatis doloribus similique, impedit laboriosam exercitationem atque sequi accusamus, facere voluptate. Quidem dolorum, totam cumque sunt rerum quia et omnis sit fugit ipsam facere consectetur atque dolorem earum quaerat eos necessitatibus ut, accusamus temporibus soluta hic nostrum ex laudantium voluptas. Possimus, officia mollitia at rerum reprehenderit nulla quisquam architecto illum voluptate?
-                    .article
-                        h3.article__title Секретные приемы верстки еще раз
-                        .article__date 09 февраля 2017
-                        .article__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sit sint, provident modi eum eaque molestiae natus quos nam ratione dicta esse ex saepe recusandae voluptatum repudiandae similique, sapiente deserunt est id! Assumenda quis veritatis iusto ea vitae sunt vel repellendus ex debitis sed quidem nesciunt placeat illo dolores perspiciatis doloribus similique, impedit laboriosam exercitationem atque sequi accusamus, facere voluptate. Quidem dolorum, totam cumque sunt rerum quia et omnis sit fugit ipsam facere consectetur atque dolorem earum quaerat eos necessitatibus ut, accusamus temporibus soluta hic nostrum ex laudantium voluptas. Possimus, officia mollitia at rerum reprehenderit nulla quisquam architecto illum voluptate?
-                    .article
-                        h3.article__title Секретные приемы верстки еще раз
-                        .article__date 09 февраля 2017
-                        .article__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sit sint, provident modi eum eaque molestiae natus quos nam ratione dicta esse ex saepe recusandae voluptatum repudiandae similique, sapiente deserunt est id! Assumenda quis veritatis iusto ea vitae sunt vel repellendus ex debitis sed quidem nesciunt placeat illo dolores perspiciatis doloribus similique, impedit laboriosam exercitationem atque sequi accusamus, facere voluptate. Quidem dolorum, totam cumque sunt rerum quia et omnis sit fugit ipsam facere consectetur atque dolorem earum quaerat eos necessitatibus ut, accusamus temporibus soluta hic nostrum ex laudantium voluptas. Possimus, officia mollitia at rerum reprehenderit nulla quisquam architecto illum voluptate?
-                    .article
-                        h3.article__title Секретные приемы верстки еще раз
-                        .article__date 09 февраля 2017
-                        .article__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sit sint, provident modi eum eaque molestiae natus quos nam ratione dicta esse ex saepe recusandae voluptatum repudiandae similique, sapiente deserunt est id! Assumenda quis veritatis iusto ea vitae sunt vel repellendus ex debitis sed quidem nesciunt placeat illo dolores perspiciatis doloribus similique, impedit laboriosam exercitationem atque sequi accusamus, facere voluptate. Quidem dolorum, totam cumque sunt rerum quia et omnis sit fugit ipsam facere consectetur atque dolorem earum quaerat eos necessitatibus ut, accusamus temporibus soluta hic nostrum ex laudantium voluptas. Possimus, officia mollitia at rerum reprehenderit nulla quisquam architecto illum voluptate?
-                    .article
-                        h3.article__title Секретные приемы верстки еще раз
-                        .article__date 09 февраля 2017
-                        .article__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sit sint, provident modi eum eaque molestiae natus quos nam ratione dicta esse ex saepe recusandae voluptatum repudiandae similique, sapiente deserunt est id! Assumenda quis veritatis iusto ea vitae sunt vel repellendus ex debitis sed quidem nesciunt placeat illo dolores perspiciatis doloribus similique, impedit laboriosam exercitationem atque sequi accusamus, facere voluptate. Quidem dolorum, totam cumque sunt rerum quia et omnis sit fugit ipsam facere consectetur atque dolorem earum quaerat eos necessitatibus ut, accusamus temporibus soluta hic nostrum ex laudantium voluptas. Possimus, officia mollitia at rerum reprehenderit nulla quisquam architecto illum voluptate?
-                    .article
-                        h3.article__title Секретные приемы верстки еще раз
-                        .article__date 09 февраля 2017
-                        .article__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sit sint, provident modi eum eaque molestiae natus quos nam ratione dicta esse ex saepe recusandae voluptatum repudiandae similique, sapiente deserunt est id! Assumenda quis veritatis iusto ea vitae sunt vel repellendus ex debitis sed quidem nesciunt placeat illo dolores perspiciatis doloribus similique, impedit laboriosam exercitationem atque sequi accusamus, facere voluptate. Quidem dolorum, totam cumque sunt rerum quia et omnis sit fugit ipsam facere consectetur atque dolorem earum quaerat eos necessitatibus ut, accusamus temporibus soluta hic nostrum ex laudantium voluptas. Possimus, officia mollitia at rerum reprehenderit nulla quisquam architecto illum voluptate?
-                    .article
-                        h3.article__title Секретные приемы верстки еще раз
-                        .article__date 09 февраля 2017
-                        .article__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sit sint, provident modi eum eaque molestiae natus quos nam ratione dicta esse ex saepe recusandae voluptatum repudiandae similique, sapiente deserunt est id! Assumenda quis veritatis iusto ea vitae sunt vel repellendus ex debitis sed quidem nesciunt placeat illo dolores perspiciatis doloribus similique, impedit laboriosam exercitationem atque sequi accusamus, facere voluptate. Quidem dolorum, totam cumque sunt rerum quia et omnis sit fugit ipsam facere consectetur atque dolorem earum quaerat eos necessitatibus ut, accusamus temporibus soluta hic nostrum ex laudantium voluptas. Possimus, officia mollitia at rerum reprehenderit nulla quisquam architecto illum voluptate?
-                    .article
-                        h3.article__title Секретные приемы верстки еще раз
-                        .article__date 09 февраля 2017
-                        .article__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sit sint, provident modi eum eaque molestiae natus quos nam ratione dicta esse ex saepe recusandae voluptatum repudiandae similique, sapiente deserunt est id! Assumenda quis veritatis iusto ea vitae sunt vel repellendus ex debitis sed quidem nesciunt placeat illo dolores perspiciatis doloribus similique, impedit laboriosam exercitationem atque sequi accusamus, facere voluptate. Quidem dolorum, totam cumque sunt rerum quia et omnis sit fugit ipsam facere consectetur atque dolorem earum quaerat eos necessitatibus ut, accusamus temporibus soluta hic nostrum ex laudantium voluptas. Possimus, officia mollitia at rerum reprehenderit nulla quisquam architecto illum voluptate?
+                        .article__desc Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem doloribus voluptates est laboriosam tempore, commodi aspernatur corporis unde totam. Possimus enim minus eum adipisci nobis veniam illo accusamus ut modi eaque tempora commodi iusto nulla aliquam itaque ex quam sed, quas voluptas minima et saepe quos! Itaque hic cumque animi neque beatae vitae architecto nam facilis consequatur optio temporibus vel aperiam deserunt consectetur ipsum maiores, illum debitis. Nobis iste est suscipit vitae asperiores, itaque qui deleniti, autem ratione eos voluptates, fugit quidem nam laborum. Consequuntur sapiente eligendi minima, dolore provident nihil earum officia quas libero impedit nulla sunt ex adipisci quibusdam hic dolor commodi. Minima sunt numquam, voluptate deleniti aliquam adipisci officia harum ex eum repudiandae molestiae at quis quam sit aperiam ea? Ea officia numquam, commodi dolorem impedit culpa tempore assumenda neque ex. Placeat ad dolorem debitis rem a minima, numquam tempora optio adipisci voluptatem tenetur reiciendis eaque quam id consectetur dolor, nisi beatae assumenda itaque blanditiis quidem. Neque, saepe voluptatem quas rem expedita temporibus ex reprehenderit molestiae labore culpa dignissimos itaque omnis cum provident repellendus voluptas, quidem similique modi! In illum rem excepturi facere fugiat. Quam voluptas at ex accusamus officiis quia id a impedit, repellat, quisquam vero inventore. Iste, culpa! Pariatur debitis, nihil, reiciendis voluptate voluptates iure cupiditate corporis quasi fugiat saepe totam a vero, unde optio corrupti deserunt maiores et mollitia perferendis eum ducimus dicta nulla tempora ea! Veniam alias, libero nulla delectus dolore excepturi quibusdam laborum? Voluptas fuga quae hic voluptate? Sit, blanditiis vitae! Libero molestias tenetur maxime, voluptas recusandae veniam iusto repudiandae consequuntur? Non modi eveniet sint excepturi suscipit, nam nulla dicta laborum quidem, rerum minima corrupti quia voluptate eius voluptatem dignissimos asperiores vel inventore labore ut nesciunt sapiente quas quam nihil! Nihil enim, tempora nemo praesentium quod quisquam deleniti id explicabo eos. Quasi a minus aliquam, deleniti ipsum nemo quia at nostrum doloribus excepturi similique dolore facilis esse qui praesentium, totam consequuntur eaque maxime delectus maiores tempore. Dolor eius ad est pariatur, ea facilis distinctio error tenetur obcaecati harum nam repellendus, aspernatur, hic doloremque itaque cumque voluptate sequi ab? Mollitia veniam nulla quas repudiandae sunt perferendis dicta culpa doloremque, porro odio necessitatibus consequatur quam voluptatem reprehenderit dolorum corporis accusantium, error in vero? Perferendis ea labore, velit nisi nesciunt, repudiandae quibusdam et voluptatem nemo provident quasi quia sunt natus sequi. Consequuntur, ratione a, quis esse et saepe natus, odit harum earum perferendis laudantium vero iusto. Ut pariatur aliquam amet reiciendis quod fugiat reprehenderit sapiente inventore ipsa molestias voluptatibus aperiam ad doloremque, voluptates accusantium voluptatum alias nisi tempora beatae? Laborum eum eos a! Blanditiis vel facere maxime inventore tenetur eligendi placeat velit harum id consequuntur, natus sed quo at, repellendus fugit! Officiis aspernatur fugit quis ex. Adipisci minima magni ducimus fugit minus expedita, quaerat dicta laboriosam veritatis sunt eveniet numquam sint architecto rem totam? Inventore adipisci veniam quod, tenetur excepturi minima provident laborum fugit. Voluptate non debitis odio magnam tenetur ipsa illum ratione perspiciatis deleniti voluptatem vel at totam dicta excepturi, harum perferendis voluptatibus, eius eveniet? Distinctio, ipsam aperiam quaerat non, at similique possimus quibusdam nihil tenetur culpa beatae delectus impedit quisquam, sint eaque cum ut quas ea maxime magni quae vitae. Vero, placeat earum voluptate voluptates excepturi sint provident iste a neque! Quibusdam ex explicabo distinctio, impedit, asperiores esse voluptate quidem accusantium blanditiis totam ullam tempore dolore earum expedita eligendi laudantium pariatur animi nobis eius possimus? Dicta temporibus, nesciunt consequuntur quia voluptatum non facilis dolorem vero assumenda animi, laudantium unde! Aperiam saepe ex ut voluptates incidunt, omnis rem quae iste voluptas facilis eveniet obcaecati at, corporis dicta aspernatur porro molestias quis commodi assumenda? Sunt sequi architecto laboriosam ex. Asperiores suscipit voluptate veritatis quas quaerat, necessitatibus nihil dolor quidem explicabo accusantium assumenda neque saepe illo modi, ratione labore error rerum laborum nostrum minus sed dolorum ut cum? Laborum culpa quod quas quibusdam cum, debitis sed harum itaque minima! Consequuntur autem reprehenderit quisquam fugiat placeat? Vero, fugiat id nam eos est, cupiditate atque architecto placeat praesentium neque expedita recusandae, commodi possimus repudiandae perspiciatis ipsam nostrum rem nihil. Possimus debitis libero inventore excepturi? Esse vitae sit placeat tenetur molestiae, quis ipsam aperiam blanditiis sunt facere cupiditate qui dicta magnam eveniet quaerat saepe illum ratione asperiores voluptates? Quia doloribus vero id sed sit, iure ad dicta praesentium similique exercitationem nam odio deserunt aspernatur velit necessitatibus sint fugiat porro voluptatum assumenda aut? Vero consectetur ducimus optio facilis quasi? Deleniti laboriosam aut atque ullam cumque? Aliquam maiores ab expedita? Ad ratione dicta officiis ex doloremque modi suscipit accusantium, sunt nemo, molestias pariatur deserunt aspernatur reprehenderit delectus voluptatibus veritatis mollitia tenetur aliquid repellat officia distinctio illum! Culpa ipsa harum, illo obcaecati quasi corporis dicta amet reprehenderit voluptate fugiat similique id quidem rem aut non labore laboriosam officia necessitatibus! Aliquam perferendis ullam accusamus, doloribus aliquid deleniti autem voluptates voluptatem quia dignissimos alias! Cumque nostrum facere quaerat quod corrupti ab odit maiores soluta aperiam iste quam vero aspernatur sit, impedit nesciunt, debitis, vel tempore quis veritatis ipsa. Inventore, aliquam itaque. Quibusdam obcaecati aliquid nemo iure minima possimus, voluptatibus, in nostrum harum laudantium, quam nisi debitis deserunt consectetur accusantium autem delectus nulla non quod temporibus ratione? Cupiditate quas architecto ipsum? Autem sit quibusdam rem magni eius error esse. Quibusdam quidem impedit eligendi delectus quisquam nulla, velit, esse fugit vel adipisci odit quae saepe. Quos exercitationem, vel corporis ipsam recusandae ut ipsum enim atque autem beatae consequatur iure adipisci quam nisi architecto, eum laudantium earum aut dolorum ratione voluptas sapiente sit! Non, ut at porro eos voluptatem deleniti eligendi tenetur quos ipsa, ipsam dolores. Architecto enim nemo id corrupti pariatur sit cumque, sed placeat eos, praesentium labore, cupiditate vel eligendi quasi magni exercitationem assumenda. Dolores, perspiciatis? Quisquam id nisi nobis cum ad libero sapiente debitis in esse est adipisci architecto ipsum sequi voluptate dolor, eligendi voluptatum, illum omnis ipsam consectetur. Nostrum eum quasi voluptatibus modi distinctio hic ad perspiciatis fugiat ab optio impedit sunt assumenda, facere aperiam quod quidem earum, veritatis consequuntur cum incidunt quibusdam. Veniam ex sunt perferendis, magnam obcaecati et quam eveniet nostrum.
         include ../common/footer
