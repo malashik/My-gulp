@@ -1,5 +1,9 @@
 'use strict'
 
+const slider = require('./slider');
+const $ = require('jquery'); 
+// slider();
+
 
 
 
@@ -84,19 +88,8 @@ const toSlider = function(){
     const slidesText = document.querySelectorAll('.works__slides-add');
     const nav = document.getElementsByClassName('works-slide__nav');
     const navItems = document.getElementsByClassName('works-row__circle');
-    // console.log(typeof navItems);
-    // let a = [1,1,2,3,'a'];
-    let current = 0;
-    // let navItemsArr = [];
-    // for (let i=0;i < navItems.length; i++){
-    //     navItemsArr.push(navItems[i]);
 
-    // }
-    // console.log(typeof navItemsArr);
-    // console.log(typeof slides);
-    // console.log('navItemsArr=',navItemsArr);
-    // let active = $('.works__slides-item').filter('.works__slides-item_active');
-    // let indexActive = active.index();
+    let current = 0;
     
     if(slides.length !== 0){
         function goToSlide(n){
@@ -176,10 +169,6 @@ const blogAnchor = function(){
     const article2_link = $('#article2_link');
     const article3_link = $('#article3_link');
 
-    // $('#article2_link').addClass('blog-nav__item_active');               //так работает
-    // article2_link.addClass('blog-nav__item_active');   // так не работает, пишет 
-                                                    //main.js:153 Uncaught TypeError: article2_link.addClass 
-                                                    //is not a function
     const changeNav = function(article,article_link){
         
             if(article.getBoundingClientRect().bottom < 0){
@@ -191,7 +180,6 @@ const blogAnchor = function(){
             }
     }
     if (articles.length !== 0){
-        // changeNav(article1,article2_link);
         document.onscroll = function(){
             if(article1.getBoundingClientRect().bottom > 0){
                 changeNav(article1,article1_link);

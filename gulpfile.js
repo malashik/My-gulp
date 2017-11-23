@@ -10,6 +10,11 @@ const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 
+const gulpWebpack = require('gulp-webpack');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js');
+
+
 const paths = {
 	root: './build',
 	templates: {
@@ -24,13 +29,23 @@ const paths = {
 		src: 'src/images/**/*.*',
 		dest: 'build/assets/images/'
 	}
+	scripts: {
+		src: 'src/js/**/*.js',
+		dest: 'build/assets/js/'
+	}
 }
-
 
 
 //очистка +
 gulp.task('clean', function() {
 	return del(paths.root);
+})
+
+//webpack +
+gulp.task('webpack', function() {
+	return gulp.src(paths.scripts.src)
+		.pipe(gulpWebpack(webpackConfig,webpack))
+		.pipe(gulp.dest(paths.scripts.dest));
 })
 
 
@@ -40,12 +55,6 @@ gulp.task('templates', function() {
 		.pipe(pug({ pretty: true }))
 		.pipe(gulp.dest(paths.root));
 })
-
-// //html +
-// gulp.task('templates', function() {
-// 	return gulp.src('src/templates/**/*.html')
-// 		.pipe(gulp.dest(paths.root));
-// })
 
 //css +
 gulp.task('styles', function(){
@@ -57,8 +66,6 @@ gulp.task('styles', function(){
 		.on('error', notify.onError())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest(paths.styles.dest))
-		// pipe(browserSync.stream())
-		
 })
 
 // перенос fonts +
@@ -79,18 +86,6 @@ gulp.task('images', function(){
 		.pipe(gulp.dest(paths.images.dest));    		
 });
 
-// следим за исходниками, папка src
-
-
-// //запускаем сервер
-// gulp.task('browserSync', ['templates', 'fonts', 'styles', 'images'], function(){
-// 	browserSync.init ({
-// 		server: paths.root
-// 	});
-// 	browserSync.watch(paths.root + '**/*.*', browserSync.reload);
-// })
-
-
 
 gulp.task('watch', function(){
     gulp.watch("src/templates/**/*.*", gulp.series('templates'));
@@ -101,17 +96,6 @@ gulp.task('watch', function(){
     gulp.watch("src/js/**/*.*", gulp.series('js'));
 })
 
-
-
-// // следим за build и релоадим браузер  
-// gulp.task('server', function(){     
-// // function server() {
-// 	browserSync.init({
-// 		server: paths.root
-// 		});
-// 	browserSync.watch(paths.root+'**/*.*', browserSync.reload);
-// })
-
 // следим за build и релоадим браузер  
 gulp.task('server', function(){     
 	// function server() {
@@ -121,7 +105,6 @@ gulp.task('server', function(){
 		browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
 	})
 	
-
 // Для работы    
 gulp.task('default', gulp.series(
 	gulp.parallel('styles','templates','images','fonts','js'),
@@ -132,20 +115,3 @@ gulp.task('build', gulp.series(
 	'clean',
 	gulp.parallel('styles','templates','images','fonts','js')
 ));								
-
-
-
-// // Запускаем сервер
-// gulp.task('serve', gulp.series('styles'), function () {
-//  browserSync.init({
-//  server: "./src" // Базовая директория
-//  });
-// browserSync.watch('./src/ * */*.*').on('change',
-// browserSync.reload); // Отслеживаем изменения и передаем на клиент
-// });
-
-
-
-
-
-
